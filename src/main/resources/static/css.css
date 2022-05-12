@@ -1,0 +1,43 @@
+body {
+    background: url(bg1.png);
+    background-size: 85%;
+}
+.sprite-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.zombieImg {
+    height: 312px;
+    width: 200px;
+    background: url(sprite-animation-png-2.png) 0 0;
+    animation: play 0.6s steps(10) infinite,
+    step 10s linear infinite;
+    position: absolute;
+    bottom: 250px;
+    left: 90%;
+    animation-play-state: paused;
+}
+@keyframes play {
+    100% {
+        background-position: -2000px;
+    }
+}
+@keyframes step {
+    100% {
+        left: 0;
+    }
+}
+.run {
+    animation-play-state: running;
+}
+@keyframes play1 {
+    100% {
+        background-position: -918px;
+    }
+}
+@keyframes step1 {
+    100% {
+        left: 100%;
+    }
+}
